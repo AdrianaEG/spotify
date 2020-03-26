@@ -38,3 +38,27 @@ a{
     display: inline-flex;
 }
 
+.opciones-menu{
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    margin: 0px 5px;
+    color: #989898;
+}
+
+.iconos{
+    display: inline-flex;
+    padding: 10px;
+}
+
+/*.contenedor .menu-lateral .icono-inicio{
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    margin: 0px 5px;
+}
+
+.contenedor .menu-lateral .icono-inicio .fas{
+    display: inline-flex;
+    padding: 10px;
+}*/
