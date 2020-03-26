@@ -12,3 +12,18 @@ a{
     grid-template-areas: "menu-lateral contenido-principal"
                             "reproductor reproductor" ;
 }
+
+.contenedor .menu-lateral{
+    display: grid;
+    grid-area: menu-lateral;
+    background-color: #040404;
+    /*grid-template-columns: 80px 140px;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "logo-spotify nombre-spotify"
+                        "logo-inicio inicio"
+                        "logo-buscar buscar"
+                        "logo-biblioteca biblioteca"
+                        "playslist playslit"
+                        "logo-playslit crear-playslist";*/
+}
+
