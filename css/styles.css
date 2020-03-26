@@ -62,3 +62,30 @@ a{
     display: inline-flex;
     padding: 10px;
 }*/
+
+.contenedor .menu-lateral .titulo-playslists{
+    font-size: 15px;
+    margin: 15px;
+}
+
+.activo{
+    background-color: #282828;
+    border-radius: 5px;
+    color: #ffffff !important;
+}
+
+.contenedor .contenido{
+    display: grid;
+    grid-area: contenido-principal;
+    background-color: #121212;
+}
+
+.contenedor .reproductor{
+    display: grid;
+    grid-area: reproductor;
+    background-color: #252525;
+}
+
+.blanco{
+    color: #ffffff;
+}
