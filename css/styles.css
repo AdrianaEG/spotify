@@ -195,6 +195,7 @@ hr{
     width: 170px;
     height: 40px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .contenedor .contenido .nav .contenedor-avatar img{
