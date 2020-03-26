@@ -2,3 +2,13 @@ a{
     text-decoration: none;
 }
 
+.contenedor{
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    grid-template-columns: 220px auto;
+    grid-template-rows: auto 120px;
+    grid-template-areas: "menu-lateral contenido-principal"
+                            "reproductor reproductor" ;
+}
