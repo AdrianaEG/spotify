@@ -27,3 +27,14 @@ a{
                         "logo-playslit crear-playslist";*/
 }
 
+.contenedor .menu-lateral .logo-spotify{
+    display: block;
+    font-size: 30px;
+    padding: 25px 10px 0px 25px;
+    margin-bottom: 20px;
+}
+
+.contenedor .menu-lateral .logo-spotify .fab, .contenedor .menu-lateral .logo-spotify .nombre-spotify{
+    display: inline-flex;
+}
+
