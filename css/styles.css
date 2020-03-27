@@ -178,16 +178,19 @@ hr{
     display: inline-flex;
     font-size: 30px;
     color: #9a9a9a;
-    margin-right: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 .contenedor .contenido .nav{
-    margin: 25px;
+    /*margin: 25px;*/
     height: 80px;
     position: fixed;
     width: 80%;
+    background-color: #121212;
 }
 
 .contenedor .contenido .nav .contenedor-avatar{
+    margin-top: 25px;
     float: right;
     display: inline-flex;
     align-items: center;
@@ -216,4 +219,39 @@ hr{
     font-weight: 800;
     font-size: 15px;
     margin-left: 5px;
+}
+
+.contenedor .contenido .contenedor-principal{
+    margin-left: 25px;
+    margin-top: 100px;
+}
+
+.contenedor .contenido .contenedor-principal .lista .nombre-listado{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.contenedor .contenido .contenedor-principal .lista .listado{
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist{
+    border-radius: 8px;
+    background-color: #272727;
+    height: 300px;
+    width: 220px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist img{
+    height: 160px;
+    width: 160px;
+    border-radius: 160px;
+}
+
+.contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist span{
+    margin-top: 20px;
+    display: block;
 }
