@@ -6,6 +6,16 @@ body{
     margin: 0;
 }
 
+/*body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;*/
+    /*border-radius: 5px;*/
+   /* border: 10px solid black;
+}*/
+
 a{
     text-decoration: none;
 }
@@ -18,7 +28,7 @@ a{
     height: 100%;
     margin: 0 auto;
     grid-template-columns: 230px auto;
-    grid-template-rows: auto 120px;
+    grid-template-rows: auto 90px;
     grid-template-areas: "menu-lateral contenido-principal"
                             "reproductor reproductor" ;
 }
@@ -121,12 +131,17 @@ hr{
     display: grid;
     grid-area: contenido-principal;
     background-color: #121212;
+    grid-template-rows: 80px auto;
+    grid-template-areas: "nav"
+                        "playslist-artistas";
 }
 
 .contenedor .reproductor{
     display: grid;
     grid-area: reproductor;
     background-color: #252525;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
 }
 
 .blanco{
@@ -175,14 +190,27 @@ hr{
 }
 
 .contenedor .contenido .nav .contenedor-boton{
-    display: inline-flex;
+    /*display: inline-flex;*/
+    display: grid;
+    grid-area: botones;
+    grid-template-columns: auto auto;
     font-size: 30px;
     color: #9a9a9a;
     margin-top: 25px;
     margin-left: 25px;
 }
+
+.contenedor .contenido .nav .contenedor-boton i{
+    margin-right: 15px;
+}
+
 .contenedor .contenido .nav{
     /*margin: 25px;*/
+    justify-content: space-between;
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: 120px 170px;
+    grid-template-areas: "botones avatar";
     height: 80px;
     position: fixed;
     width: 80%;
@@ -190,9 +218,13 @@ hr{
 }
 
 .contenedor .contenido .nav .contenedor-avatar{
+    display: grid;
+    grid-area: avatar;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "foto-avatar nombre-usuario desplegar";
     margin-top: 25px;
-    float: right;
-    display: inline-flex;
+    /*float: right;*/
+    /*display: inline-flex;*/
     align-items: center;
     background-color: #050505;
     width: 170px;
@@ -202,7 +234,8 @@ hr{
 }
 
 .contenedor .contenido .nav .contenedor-avatar img{
-    display: inline-flex;
+    display: grid;
+    grid-area: foto-avatar;
     height: 35px;
     width: 35px;
     border-radius: 30px;
@@ -211,29 +244,91 @@ hr{
 }
 
 .contenedor .contenido .nav .contenedor-avatar .nombre-usuario{
+    display: grid;
+    grid-area: nombre-usuario;
     font-size: 10px;
     font-weight: 800;
 }
 
 .contenedor .contenido .nav .contenedor-avatar i{
+    display: grid;
+    grid-area: desplegar;
     font-weight: 800;
     font-size: 15px;
     margin-left: 5px;
 }
 
 .contenedor .contenido .contenedor-principal{
+    display: grid;
+    grid-area: playslist-artistas;
     margin-left: 25px;
-    margin-top: 79px;
+    /*grid-template-rows: auto auto;
+    grid-template-areas: "lista"
+                        "lista";*/
+    max-height: 487px;
+    overflow: auto;
 }
 
-.contenedor .contenido .contenedor-principal .lista .nombre-listado{
+
+.contenedor .contenido .contenedor-principal::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor .contenido .contenedor-principal::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .contenedor .contenido .contenedor-principal::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+  
+  .contenedor .contenido .contenedor-principal::-webkit-scrollbar-track {
+    background: #121212;
+  }
+  
+  .contenedor .contenido .contenedor-principal::-webkit-scrollbar-thumb {
+    background:#505050;
+  }
+  
+  .contenedor .contenido .contenedor-principal::-webkit-scrollbar-thumb:hover {
+    background: #505050;
+  }
+
+.contenedor .contenido .contenedor-principal .lista{
+    display: grid;
+    /*grid-area: lista;
+    grid-template-rows: 80px auto;*/
+    grid-template-areas: "nombre-lista"
+                        "listado";
+    margin-bottom: 30px;
+}
+
+.contenedor .contenido .contenedor-principal .lista .titulo-vermas{
+    align-items: center;
+    display: grid;
+    grid-area: nombre-lista;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    grid-template-areas: "titulo vermas";
+}
+
+.contenedor .contenido .contenedor-principal .lista .titulo-vermas .nombre-listado{
+    display: grid;
+    grid-area: titulo;
     font-size: 30px;
     font-weight: 800;
 }
 
+.contenedor .contenido .contenedor-principal .lista .titulo-vermas a{
+    display: grid;
+    grid-area: vermas;
+}
+
 .contenedor .contenido .contenedor-principal .lista .listado{
+    display: grid;
+    grid-area: listado;
     margin-top: 20px;
-    display: inline-flex;
+    grid-template-columns: repeat(5, auto);
 }
 
 .contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist{
@@ -264,6 +359,57 @@ hr{
 }
 
 .contenedor .contenido .contenedor-principal .lista .ver-mas{
-    float: right;
+    font-size: 14px;
+    font-weight: 800;
+    color: #a6a6a6;
     margin-right: 80px;
 }
+
+.contenedor .reproductor .contenedor-imagen-artista{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "imagen nombre-descripcion-artista botones-mg";
+    margin-left: 25px;
+    align-items: center;
+}
+
+.contenedor .reproductor .contenedor-imagen-artista img{
+    display: grid;
+    grid-area: imagen;
+    height: 50px;
+    width: 50px;
+}
+
+.contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion{
+    display: grid;
+    grid-area: nombre-descripcion-artista;
+    grid-template-rows: 15px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*.contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion span{
+    font-size: 12px;
+    color: #ffffff;
+}*/
+
+.contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion .nombre-artista{
+    display: grid;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion .descripcion-artista{
+    display: grid;
+    font-size: 12px;
+    color: #696969;
+}
+
+
+
+.contenedor .reproductor .contenedor-imagen-artista .botones-mg{
+    display: grid;
+    grid-area: botones-mg;
+    grid-template-columns: repeat(2, auto);
+}
+
