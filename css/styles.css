@@ -83,6 +83,7 @@ a{
     color: #010101;
     text-align: initial;
     margin: 3px 0px 3px 25px;
+    outline: none;
 }
 
 .btn-crear-playslists span, .btn-likeados span{
@@ -397,12 +398,19 @@ hr{
     display: grid;
     font-size: 14px;
     color: #ffffff;
+    cursor: pointer;
+}
+
+.contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion .nombre-artista:hover,
+.contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion .descripcion-artista:hover{
+    text-decoration: underline;
 }
 
 .contenedor .reproductor .contenedor-imagen-artista .nombre-descripcion .descripcion-artista{
     display: grid;
     font-size: 12px;
     color: #696969;
+    cursor: pointer;
 }
 
 
@@ -411,5 +419,80 @@ hr{
     display: grid;
     grid-area: botones-mg;
     grid-template-columns: repeat(2, auto);
+}
+
+.contenedor .reproductor .contenedor-imagen-artista .botones-mg i{
+    font-size: 14px;
+    margin-right: 10px;
+    color: #626262;
+}
+
+.contenedor .reproductor .contenedor-imagen-artista .botones-mg i:hover{
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.contenedor .reproductor .contenedor-reproduccion{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "aleatorio atras reproducir adelante repeticion"
+                            "tiempo-comienzo contador-tiempo contador-tiempo contador-tiempo tiempo-final";
+    align-items: center;
+}
+
+.contenedor .reproductor .contenedor-reproduccion i{
+    color: #696969;
+    font-size: 14px;
+}
+
+.contenedor .reproductor .contenedor-reproduccion i:hover{
+    color: #ffffff;
+}
+
+.contenedor .reproductor .contenedor-reproduccion .play{
+    font-size: 30px !important;
+}
+
+.contenedor .reproductor .contenedor-reproduccion .play:hover{
+    font-weight: 800;
+}
+
+.contenedor .reproductor .contenedor-reproduccion .tiempo-inicial{
+    display: grid;
+    grid-area: tiempo-comienzo;
+    color: #696969;
+    font-size: 14px;
+}
+
+.contenedor .reproductor .contenedor-reproduccion .contador-tiempo{
+    display: grid;
+    grid-area: contador-tiempo;
+    color: #696969;
+    font-size: 14px;
+}
+
+.contenedor .reproductor .contenedor-reproduccion .tiempo-final{
+    display: grid;
+    grid-area: tiempo-final;
+    color: #696969;
+    font-size: 14px;
+}
+
+.contenedor .reproductor .contenedor-controles{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    color: #696969;
+    font-size: 15px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.contenedor .reproductor .contenedor-controles i{
+    margin-right: 10px;
+}
+
+.contenedor .reproductor .contenedor-controles i:hover{
+    color: #ffffff;
 }
 
