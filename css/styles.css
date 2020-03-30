@@ -555,7 +555,3 @@ hr{
 .icono-inicio:hover, .icono-buscar:hover, .icono-biblioteca:hover,.btn-crear-playslists span:hover, .btn-likeados span:hover{
     color: #ffffff;
 }
-
-@media (max-width: 1300px) {
-
-}
