@@ -201,6 +201,7 @@ hr{
     display: grid;
     grid-area: nav;
     grid-template-columns: 120px 170px;
+    grid-template-rows: auto auto;
     grid-template-areas: "botones avatar";
     height: 80px;
     position: fixed;
@@ -330,6 +331,19 @@ hr{
     text-align: center;
     padding-top: 25px;
     margin-right: 16px;
+    cursor: pointer;
+}
+
+.contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist:hover i{
+    display: flex;
+}
+
+.contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist i{
+    display: none;
+    font-size: 30px;
+    float: right;
+    margin-right: 10px;
+    color: #1db954;
 }
 
 .contenedor .contenido .contenedor-principal .lista .listado .contenedor-artista-playslist img{
@@ -485,3 +499,34 @@ hr{
 .contenedor .reproductor .contenedor-controles i:hover{
     color: #ffffff;
 }
+
+.menu-cuenta{
+    background: #282828;
+    color: #a8a8a8;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 60px;
+    box-shadow: 12px 10px 18px 0px rgba(0,0,0,0.75);
+}
+
+.menu-cuenta div:hover{
+    cursor: pointer;
+    color: #ffffff
+}
+
+.oculto{
+    display: none;
+}
+
+.visible{
+    display: grid;
+}
+
+
+.icono-inicio:hover, .icono-buscar:hover, .icono-biblioteca:hover,.btn-crear-playslists span:hover, .btn-likeados span:hover{
+    color: #ffffff;
+}
+
