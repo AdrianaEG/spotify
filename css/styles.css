@@ -438,10 +438,25 @@ hr{
 
 .contenedor .reproductor .contenedor-reproduccion{
     display: grid;
-    grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: "aleatorio atras reproducir adelante repeticion"
-                            "tiempo-comienzo contador-tiempo contador-tiempo contador-tiempo tiempo-final";
+    grid-template-areas: "controles"
+                        "barra";
+   
+}
+
+.controles{
+    display: grid;
+    grid-area: controles;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.barra{
+    display: grid;
+    grid-area: barra;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
 }
 
@@ -464,21 +479,25 @@ hr{
 
 .contenedor .reproductor .contenedor-reproduccion .tiempo-inicial{
     display: grid;
-    grid-area: tiempo-comienzo;
+    /*grid-area: tiempo-comienzo;*/
     color: #696969;
     font-size: 14px;
 }
 
 .contenedor .reproductor .contenedor-reproduccion .contador-tiempo{
     display: grid;
-    grid-area: contador-tiempo;
-    color: #696969;
+    /*grid-area: contador-tiempo;*/
+    background-color: #696969;
     font-size: 14px;
+    width: 245px;
+    height: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .contenedor .reproductor .contenedor-reproduccion .tiempo-final{
     display: grid;
-    grid-area: tiempo-final;
+    /*grid-area: tiempo-final;*/
     color: #696969;
     font-size: 14px;
 }
@@ -491,6 +510,13 @@ hr{
     align-items: center;
     margin-right: 20px;
 }
+
+.contenedor-controles div{
+    width: 65px;
+    background-color: #696969;
+    height: 5px;
+}
+
 
 .contenedor .reproductor .contenedor-controles i{
     margin-right: 10px;
@@ -530,3 +556,6 @@ hr{
     color: #ffffff;
 }
 
+@media (max-width: 1300px) {
+
+}
