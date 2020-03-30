@@ -555,3 +555,15 @@ hr{
 .icono-inicio:hover, .icono-buscar:hover, .icono-biblioteca:hover,.btn-crear-playslists span:hover, .btn-likeados span:hover{
     color: #ffffff;
 }
+
+@media(max-width:1100px){
+    .contenedor .contenido .nav{
+        position: absolute;
+    }
+}
+
+@media(max-width:800px){
+    .contenedor .reproductor .contenedor-reproduccion .contador-tiempo{
+        width: 100px;
+    }
+}
